@@ -1,0 +1,104 @@
+Wolf CMS - Change Log
+
+======
+Sigla:
++ enhancement, addition
+- bug fix
+. other development
+======
+
+0.7.0 - released 2010-??-??
+
++ Added Russian translation for plugins - thanks Kostromind
++ Added alt and title strings to improve i18n consistency - issue 138
+- Fixed issue where some server might throw error about URL_PUBLIC - issue 119
+- Fixed backend layout call for dynamic admin directory name
+- Fixed system files to call dynamic admin directory name
+- Fixed missing id string in settings file - issue 129
+- Fixed trailing slash issue with Pagination.php helper
+. Updated Russian translation for core and plugins - thanks Kostromind
+. Updated Czech translation for core - thanks Iva Pelcová
+. Updated default layout taglines
+
+0.6.0 - released 2010-01-31
++ Added Page::linkById() function to allow for self-updating links. - issue 131
++ Added preview function to pages list.
++ Added dispatch_route_found event with uri as parameter - issue 111
++ Added getContentFromUrl() function to Framework. - issue 54
++ Added basic PHP 5.3.0 support - issue 95
++ Added view_page_after_edit_tabs event to fire just after rendering of tab-control div in edit page view. - issue 12
++ Added improved install sequence.
++ Added patch where page tags are now also cloned. - issue 46 - thanks gilles
++ Added support for HTTPS in the backend. Set USE_HTTPS to true in config.php. - issue 4
++ Added Flash::setNow() function to allow flash messages in current request. - issue 67
++ Added support for frontend PluginController availability. Fixes issue 64.
++ Added basic cron support.
++ Added poormans cron support.
++ Added user-specific language setting for back-end. - issue 13
++ Added uninstall feature support for comment plugin.
++ Added uninstall feature for plugins - issue 40
++ Added new core plugin, BackupRestore - issue 27
++ Added improved <title> for backend. - issue 7
++ Added sitewide sender email address. - issue 11
++ Added use of site title for reminder mail - issue 10
++ Added number of translatable strings - issue 15
++ Added STATUS_PREVIEW to Page which allows administrator, developer, editor to preview page. - issue 65
++ Added getUri() function to Page.
++ Added install/requirements.php to allow checking of prerequisites. - issue 71
++ Added Portugese translation for Wolf core. Thanks Walker de Alencar.
++ Added Polish translation for core plugins (comment, skeleton). Thanks piotr.fuz.
++ Added support for setting users preferred language to system default upon creation.
+- Fixed issue with Wolf using too generice GET variable when in mod_rewrite mode. - issue 117
+- Fixed issue with PDO bug starting from PHP 5.3 where localhost equated to using unix socket that may be misconfigured. - issue 110
+- Fixed issue where user gets default permission of 'editor'.
+- Fixed issue with not being able to edit layouts with SQLite. - issue 3
+- Fixed bug where get_request_method() returned GET instead of POST - issue 17
+- Fixed bug in deleting a page with children where page_part and page_tag entries were not removed. - issue 73
+- Fixed bug in Framework where afterSave() was never called. - issue 16
+- Fixed spelling problem by replacing updator() and updatorId() by updater() and updaterId() - issue 1
+- Fixed problem where child pages were not deleted when deleting parent. - issue 45 - thanks gilles
+- Fixed duplicate IDs in Administration / Settings tab - issue 37 - thanks slowgary
+- Fixed atom:link reference in rss.xml
+- Fixed admin theme name - issue 98
+. Added settings tab to edit page screeen
+. Partial migration from Prototype to JQuery
+. Improved View Site link.
+. Removed BASE HREF tag from backend layout. May need updates to plugins! - issue 19
+. Removed PDO lite support. (supported use of PDO in case you had no PDO)
+. Removed STATUS_REVIEWED from Page - issue 65
+. Removed outer DIV produced by breadcrumbs() function - issue 18
+. Removed last remnants of split (classes/Page) - issue 33
+. Change max DB name from 40 to 120 - issue 58
+. Prevent usage of set_magic_quotes_runtime() from PHP 5.3 and up - issue 56
+. File Manager - show folders before files - issue 38 - thanks slowgary
+. Minor enhancements of Comments core plugin
+. Minor text, css edits
+. Updated Polish translation for core. Thanks piotr.fuz.
+
+0.5.5 - released 2009-08-04
++ Added new Wolf layout.
++ Added auto-fading messages.
++ Added updated Russian translation. Thanks Dmitry.
++ Added Slovak translation. Thanks Payo.
++ Added Slovenian translation. Thanks skye28.
+- Fixed problem with comment plugin frog.ttf being damaged - issue 29
+- Fixed backend favicon tag not closed - frog issue 178
+- Fixed faulty code in comment plugin documentation - thanks stevesmc
+- Added missing HTML tags in default Homepage sidebar code - issue 22
+. Changed default RewriteBase to wolfcms
+. Added new default admin area theme
+. Changed old Normal layout into new Simple layout with new colors.
+. Changed include to include_once in PluginController - frog issue 179
+. Removing unneeded files - issue 23
+. Rebranded to Wolf CMS
+
+IMPORTANT NOTES for plugin devs -
+    - changed FROG_VERSION into CMS_VERSION
+    - changed FROG_ROOT into CMS_ROOT
+    - changed FROG_CONN into CMS_CONN
+    - old FROG_---- versions still work, but are deprecated and will be removed
+      in future releases of Wolf CMS
+    - changed all other instances of "frog" into "wolf"
+
+0.5.0 -
+. Straight fork from Frog CMS 0.9.5

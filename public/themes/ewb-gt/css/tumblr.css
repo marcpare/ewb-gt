@@ -1,0 +1,23 @@
+.tumblr_posts {
+  list-style: none;
+}
+
+.tumblr_post {
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 50px;
+  margin-bottom: 1.25em;
+}
+
+.tumblr_title {
+  font-size:1.2em;
+  line-height:1.25;
+  margin-bottom:1.25em;
+}
+
+.tumblr_photo_post {
+  text-align: center;
+}
+
+.tumblr_photo {
+  border: 10px solid #eee;
+}
